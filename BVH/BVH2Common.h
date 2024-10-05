@@ -157,6 +157,7 @@ struct BVHRT : public ISceneObject2
   void UpdateInstance(uint32_t a_instanceId, const float4x4 &a_matrix) override;
 
   CRT_Hit RayQuery_NearestHit(float4 posAndNear, float4 dirAndFar) override;
+  CRT_Hit RayQuery_NearestHitGS(float4 posAndNear, float4 dirAndFar) override;
   CRT_Hit RayQuery_NearestHitMotion(LiteMath::float4 posAndNear, LiteMath::float4 dirAndFar, float time) override
   { return RayQuery_NearestHit(posAndNear, dirAndFar); }
 
